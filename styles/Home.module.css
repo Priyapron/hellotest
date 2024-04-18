@@ -29,9 +29,10 @@
   position: relative;
   margin: 0;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
+  background-image: linear-gradient(to right, #0071da, #00ddff);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
+  /* background-color: rgba(var(--callout-rgb), 0.5); */
 }
 
 .code {
@@ -49,9 +50,11 @@
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
+  /* เพิ่มส่วน CSS เพื่อกำหนดสีพื้นหลังเป็น gradient */
+  background-image: linear-gradient(to right, #0071da, #00ddff);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  margin: 0.5rem;
 }
 
 .card span {
@@ -72,12 +75,15 @@
   max-width: 30ch;
 }
 
+/* Hello world */
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  position: relative; /* ส่วนสำคัญที่อนุญาตให้ส่วนตกแต่ง Hello World! มีการวางตำแหน่งได้อย่างถูกต้อง */
+  padding: 4rem 0; /* การกำหนด Padding เพื่อให้ Hello World! ห่างจากขอบด้านบนและล่าง */
+  font-size: 4rem; /* เพิ่มขนาดตัวหนังสือสำหรับ Hello World! */
+  text-shadow: 4px 4px 8px rgb(0, 174, 255); /* เพิ่มเอฟเฟกต์การแสดงผลแสงให้กับข้อความ */
 }
 
 .center::before {
@@ -103,10 +109,8 @@
   filter: blur(45px);
   transform: translateZ(0);
 }
+/* Hello world */
 
-.logo {
-  position: relative;
-}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -213,10 +217,6 @@
   .vercelLogo {
     filter: invert(1);
   }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
 }
 
 @keyframes rotate {
@@ -227,3 +227,5 @@
     transform: rotate(0deg);
   }
 }
+
+
